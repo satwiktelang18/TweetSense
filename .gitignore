@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+dataset/training.1600000.processed.noemoticon.csv
