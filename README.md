@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🐦 TweetSense AI
+# TweetSense AI
 
 ### Twitter Sentiment Analysis using Machine Learning
 
@@ -17,7 +17,7 @@ Analyze tweets in real-time using a Machine Learning model trained on the **Sent
 
 ---
 
-# 📌 Overview
+# Overview
 
 TweetSense AI is a Machine Learning web application that predicts whether a tweet expresses **Positive** or **Negative** sentiment.
 
@@ -27,7 +27,7 @@ The web interface is built using **Streamlit** and provides real-time prediction
 
 ---
 
-# ✨ Features
+# Features 
 
 - ✅ Real-time tweet sentiment prediction
 - ✅ Clean and responsive Streamlit UI
@@ -40,7 +40,12 @@ The web interface is built using **Streamlit** and provides real-time prediction
 
 ---
 
-# 🧠 Machine Learning Pipeline
+# Application Preview
+
+<img width="1470" height="799" alt="Screenshot 2026-06-29 at 8 13 30 PM" src="https://github.com/user-attachments/assets/fc78ffb7-293d-4a2e-92c7-6eb84a07b3d9" />
+
+
+# Machine Learning Pipeline
 
 ```
 Tweet
@@ -69,7 +74,7 @@ Positive / Negative Prediction
 
 ---
 
-# 🛠 Technologies Used
+# Technologies Used
 
 - Python
 - Streamlit
@@ -82,7 +87,7 @@ Positive / Negative Prediction
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```
 TweetSense/
@@ -101,7 +106,7 @@ TweetSense/
 
 ---
 
-# 📊 Dataset
+# Dataset
 
 This project is trained on the **Sentiment140 Dataset**.
 
@@ -116,7 +121,7 @@ Dataset Characteristics:
 
 ---
 
-# ⚙️ Installation
+# Installation
 
 Clone the repository
 
@@ -144,7 +149,7 @@ streamlit run app.py
 
 ---
 
-# 🚀 Usage
+# Usage
 
 1. Launch the Streamlit application.
 2. Enter any tweet.
@@ -156,7 +161,7 @@ streamlit run app.py
 
 ---
 
-# 📈 Model Information
+# Model Information
 
 | Model | Logistic Regression |
 |--------|---------------------|
@@ -164,24 +169,6 @@ streamlit run app.py
 | NLP | NLTK |
 | Classification | Binary |
 | Dataset | Sentiment140 |
-
----
-
-# 📷 Application Preview
-
-> Add a screenshot of the application here.
-
-Example:
-
-```
-assets/homepage.png
-```
-
-Then use
-
-```md
-![Application Screenshot](assets/homepage.png)
-```
 
 ---
 
@@ -199,15 +186,3 @@ Then use
 # 👨‍💻 Author
 
 **Satwik Telang**
-
-B.Tech Computer Science (AI & ML)
-
-VIT Bhopal University
-
-GitHub: https://github.com/satwiktelang18
-
-LinkedIn: *(Add your LinkedIn profile here)*
-
----
-
-# ⭐ If you found this project useful, consider giving it a Star!
