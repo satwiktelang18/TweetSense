@@ -42,7 +42,8 @@ The web interface is built using **Streamlit** and provides real-time prediction
 
 # Application Preview
 
-<img width="1470" height="799" alt="Screenshot 2026-06-29 at 8 13 30 PM" src="https://github.com/user-attachments/assets/fc78ffb7-293d-4a2e-92c7-6eb84a07b3d9" />
+<img width="1470" height="799" alt="Screenshot 2026-06-29 at 8 16 01 PM" src="https://github.com/user-attachments/assets/d2ee4bc4-e08a-4e29-8af6-5d48eb6120f6" />
+
 
 
 # Machine Learning Pipeline
