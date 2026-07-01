@@ -1,6 +1,7 @@
 import pickle
 import re
 
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
@@ -12,6 +13,7 @@ model = pickle.load(open("model/model.pkl", "rb"))
 vectorizer = pickle.load(open("model/vectorizer.pkl", "rb"))
 
 stemmer = PorterStemmer()
+nltk.download("stopwords", quiet=True)
 stop_words = set(stopwords.words("english"))
 
 # ==========================================
