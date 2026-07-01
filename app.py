@@ -1,5 +1,7 @@
 import streamlit as st
+import pandas as pd
 from chatbot import predict_sentiment
+from tweet_columns import TEXT_COLUMN_ALIASES, detect_text_column
 
 # ==========================================================
 # PAGE CONFIG
@@ -478,6 +480,56 @@ unsafe_allow_html=True
 st.write("")
 st.write("")
 st.divider()
+
+# ==========================================================
+# CSV BATCH PREDICTION
+# ==========================================================
+
+st.markdown(
+    "<div class='section'>CSV Batch Prediction</div>",
+    unsafe_allow_html=True
+)
+
+uploaded_csv = st.file_uploader(
+    "Upload a CSV with tweet text",
+    type=["csv"]
+)
+
+if uploaded_csv is not None:
+
+    batch_df = pd.read_csv(uploaded_csv)
+    text_column = detect_text_column(batch_df.columns)
+
+    if text_column is None:
+
+        st.warning(
+            "CSV must include one of these text columns: "
+            + ", ".join(TEXT_COLUMN_ALIASES)
+        )
+
+    else:
+
+        scored_rows = batch_df.head(250).copy()
+        predictions = scored_rows[text_column].fillna("").astype(str).apply(
+            predict_sentiment
+        )
+
+        scored_rows["predicted_sentiment"] = [
+            prediction[0] for prediction in predictions
+        ]
+        scored_rows["confidence"] = [
+            round(prediction[1], 4) for prediction in predictions
+        ]
+
+        st.dataframe(
+            scored_rows[[text_column, "predicted_sentiment", "confidence"]]
+        )
+        st.download_button(
+            "Download Predictions",
+            scored_rows.to_csv(index=False),
+            "tweetsense_predictions.csv",
+            "text/csv"
+        )
 
 # ==========================================================
 # MODEL INFORMATION

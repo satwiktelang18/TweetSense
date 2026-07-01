@@ -36,6 +36,7 @@ The web interface is built using **Streamlit** and provides real-time prediction
 - ✅ Text preprocessing using NLTK
 - ✅ Confidence score visualization
 - ✅ AI explanation for every prediction
+- ✅ CSV batch prediction for tweet export files
 - ✅ Lightweight and fast inference
 
 ---
@@ -159,6 +160,9 @@ streamlit run app.py
    - Predicted Sentiment
    - Confidence Scores
    - AI Explanation
+5. Or upload a CSV with `tweet`, `text`, `full_text`, `content`, `body`, or
+   `message` columns to score a batch of reviewed X/Twitter exports from
+   TweetClaw, OpenClaw plugins, or similar tools.
 
 ---
 
